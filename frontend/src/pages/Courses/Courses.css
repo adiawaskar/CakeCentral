@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+/* Page container */
+.courses-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .courses-landing {
+    position: relative;
+    height: 100vh;
+    display: flex; /* Use flexbox for side-by-side layout */
+    overflow: hidden;
+}
+
+.courses-landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/coursebg.jpg") no-repeat center center/cover;
+    filter: brightness(50%);
+    z-index: 0;
+}
+
+.landing-text-box {
+    flex: 1; /* Takes up half of the space */
+    position: relative;
+    background: rgba(253, 220, 188, 0.524); /* Transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 1; /* Ensures it sits above the pseudo-element */
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 60%;
+    margin-top: 150px;
+}
+
+.landing-text-box h1 {
+    font-size: 50px;
+    color: rgb(247, 247, 247);
+}
+
+.landing-text-box p {
+    font-size: 25px;
+    color: rgb(247, 247, 247);
+}
+
+.landing-image-box {
+    flex: 1; /* Takes up the other half of the space */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    z-index: 1;
+}
+
+.landing-image-box img {
+    max-width: 100%; /* Ensures the image is responsive */
+    max-height: 100%; /* Keeps the image within bounds */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+.chef-image {
+    position: relative;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    align-self: flex-end; /* Align it to the bottom */
+    margin-bottom: 80px;
+}
+
+
+  
+  /* Courses grid section */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+    padding: 50px;
+    background-color: #ffdcaa;
+  }
+  
+  .course-card {
+    background: #f6e0d3;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .course-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .course-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .course-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+
+  /* Enrollment Form Section */
+.enrollment-form-container {
+    background: url("../../assets/enrollment-bg.jpg") no-repeat center center/cover;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .enrollment-form-box {
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+  }
+  
+  .enrollment-form-box h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    outline: none;
+    border: 2px solid #ffdcaa;
+  }
+  
+  .submit-button {
+    background-color: #ffdcaa;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .submit-button:hover {
+    background-color: #f9b58e;
+  }
+  

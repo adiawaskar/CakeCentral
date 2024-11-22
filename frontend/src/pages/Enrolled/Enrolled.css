@@ -1,0 +1,66 @@
+.enrolled-page {
+    background-image: url('../../assets/enrolled_bg.png'); /* Cream background color */
+    min-height: 100vh; /* Ensure it takes the entire screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .enrolled-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .enrolled-table th, .enrolled-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .enrolled-table th {
+    background-color: #070067;
+    color: #ffffff;
+  }
+  
+  .enrolled-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .enrolled-table tr {
+    background-color: white; /* Ensure the rows are white */
+  }
+  
+  .enrolled-table td[colSpan="4"] {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+  }
+  
+  .download-buttons {
+    margin-top: 20px;
+  }
+  
+  .download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5a9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .download-button:hover {
+    background-color: #488;
+  }
+  
