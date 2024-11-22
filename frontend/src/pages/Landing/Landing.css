@@ -1,0 +1,165 @@
+/* Landing Container */
+.landing_container {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full height of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Background Image Styling with Reduced Brightness */
+  .background_image {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/landing1.jpg'); /* Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%); /* Reduce brightness of the background only */
+    z-index: -1; /* Ensure the background stays behind the content */
+  }
+  
+  /* Landing Content Section */
+  .landing_content {
+    display: flex;
+    justify-content: space-between; /* Create space between text and image */
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Text Section */
+  .text_section {
+    flex: 1;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    border-radius: 8px;
+    opacity: 1; /* Keep text box fully visible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .landing_title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .landing_text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 500px;
+  }
+  
+  .landing_button {
+    background-color: #f8b400;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .landing_button:hover {
+    background-color: #e59500;
+  }
+  
+  /* Image Section */
+  .image_section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .baker_image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for the image */
+  }
+  
+  
+  
+  /* About Section */
+  .about_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px 20px; */
+    background-color: #ffdcaa; /* Light background for About section */
+    width: 100%;
+  }
+  
+  .about_text {
+    flex: 1;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .about_left {
+    text-align: right; /* Align text on the left side to the right */
+  }
+  
+  .about_right {
+    text-align: left; /* Align text on the right side to the left */
+  }
+  
+  .about_image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about_image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for the image */
+  }
+  
+/* Feature Box Styling */
+.feature_box {
+    /* width: 250px; Fixed width */
+    /* height: 250px;  */
+    /* background-color: #fff; */
+    /* padding: 20px; */
+    /* border: 2px solid #ddd; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Optional: Shadow for box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text horizontally */
+    margin: 10px 0; /* Space between the boxes */
+  }
+  
+  .feature_box h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .feature_box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    padding: 0 10px; /* Padding inside the text */
+  }
+  
