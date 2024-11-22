@@ -28,7 +28,7 @@
 .landing-text-box {
     flex: 1; /* Takes up half of the space */
     position: relative;
-    background: rgba(253, 220, 188, 0.524); /* Transparent background */
+    background: rgba(253, 220, 188, 0.7); /* Transparent background */
     padding: 40px;
     border-radius: 10px;
     z-index: 1; /* Ensures it sits above the pseudo-element */
@@ -39,16 +39,17 @@
     text-align: center;
     height: 60%;
     margin-top: 150px;
+    margin-left: 100px;
 }
 
 .landing-text-box h1 {
     font-size: 50px;
-    color: rgb(247, 247, 247);
+    color: rgb(106, 0, 0);
 }
 
 .landing-text-box p {
     font-size: 25px;
-    color: rgb(247, 247, 247);
+    color: rgb(106, 0, 0);
 }
 
 .landing-image-box {
@@ -64,7 +65,7 @@
     max-width: 100%; /* Ensures the image is responsive */
     max-height: 100%; /* Keeps the image within bounds */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
     height: 500px;
 }
 

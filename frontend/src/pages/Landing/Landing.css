@@ -34,6 +34,7 @@
     padding: 20px;
     align-items: center;
     justify-content: center;
+    margin-top: 90px;
   }
   
   /* Text Section */
@@ -88,7 +89,8 @@
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Optional: Shadow for the image */
+    /* margin-top: 70px; */
   }
   
   
