@@ -1,0 +1,89 @@
+/* Menu.css */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  } */
+  
+  /* The main container for the menu page */
+.menu_page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Container to center the content */
+  .menu_container {
+    flex: 1; /* Takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffdcaa; /* Background color for the menu */
+  }
+  
+  /* Title styling */
+  .menu_title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  /* Grid styling for cakes */
+  .cake_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 50px; /* Space for footer */
+    overflow-y: auto; /* Allow scrolling if there are more items */
+  }
+  
+  /* Individual cake item */
+  .cake_item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the image doesn't spill out of the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Set a fixed height for the item */
+  }
+  
+  /* Cake image takes full width and height of its container */
+  .cake_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the div while maintaining aspect ratio */
+  }
+  
+  /* Cake name text */
+  .cake_name {
+    position: absolute;
+    bottom: 10px; /* Adjusts the position from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the name horizontally */
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: text shadow to make it more readable */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: transparent black background */
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  /* If there are no items, display this message */
+  .no_items {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+  }

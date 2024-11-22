@@ -14,9 +14,9 @@ const Landing = () => {
       <div className="landing_content">
         {/* Text Section */}
         <div className="text_section">
-          <h1 className="landing_title">Welcome to CakeShop</h1>
+          <h1 className="landing_title">Welcome to CakeCentral</h1>
           <p className="landing_text">
-            Discover the perfect cake for every occasion at CakeShop! Whether it's a birthday, wedding, or a special celebration, we have something to delight your taste buds.
+            Discover the perfect cake for every occasion at CakeCentral! Whether it's a birthday, wedding, or a special celebration, we have something to delight your taste buds.
           </p>
           <p className="landing_text">
             Our team of expert bakers uses only the finest ingredients to craft delicious, fresh, and beautifully decorated cakes. Join us in creating sweet memories.

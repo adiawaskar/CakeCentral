@@ -5,7 +5,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <header className="header_container">
-      <h1 className="header_title">CakeShop</h1>
+      <h1 className="header_title">CakeCentral</h1>
       <nav className="header_nav">
         <ul className="header_menu">
           <li className="header_item">
