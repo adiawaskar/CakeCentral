@@ -24,4 +24,3 @@ yarn-error.log*
 
 #Environment variables
 .env
-.node_modules
