@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Landing from "./pages/Landing/Landing";
 import Menu from "./pages/Menu/Menu";
+import Order from "./pages/Order/Order";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="/order" element={<Order />} />
         </Routes>
         <Footer />
       </div>

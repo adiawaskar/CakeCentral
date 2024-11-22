@@ -1,9 +1,15 @@
 import React from 'react';
 import './Landing.css';
+import { useNavigate } from 'react-router-dom'; 
 import aboutImg from '../../assets/landing2.png';
 import bakerImg from '../../assets/baker_img.png';
 
 const Landing = () => {
+    const navigate = useNavigate(); // Hook to access navigation function
+
+    const handleOrderNowClick = () => {
+        navigate('/order'); 
+    };
   return (
     <div>
       {/* Landing Section */}
@@ -21,7 +27,7 @@ const Landing = () => {
           <p className="landing_text">
             Our team of expert bakers uses only the finest ingredients to craft delicious, fresh, and beautifully decorated cakes. Join us in creating sweet memories.
           </p>
-          <button className="landing_button">Order Now</button>
+          <button className="landing_button" onClick={handleOrderNowClick}>Order Now</button>
         </div>
         
         {/* Baker Image Section */}
