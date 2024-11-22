@@ -47,7 +47,7 @@
   }
   
   /* Individual cake item */
-  .cake_item {
+  .cake_card {
     position: relative;
     display: flex;
     justify-content: center;

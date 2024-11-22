@@ -1,0 +1,77 @@
+/* Contact.css */
+
+/* Set the background image for the whole page */
+.contact-container {
+    display: flex;
+    justify-content: flex-start; /* Align form to the left */
+    align-items: flex-start; /* Align form to the top */
+    height: 100vh;
+    background-image: url('../../assets/contact1.jpg'); /* The path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 50px; /* Add padding from the top */
+    padding-left: 20px; /* Adjust left padding for spacing */
+  }
+  
+  /* Style the form container */
+  .contact-form {
+    background-color: rgb(60, 0, 0); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Form width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 60px; /* Add margin from the top */
+    margin-left: 100px; /* Add margin from the left */
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(255, 252, 225);
+    font-size: 40px;
+  }
+  
+  /* Style the form fields */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(255, 252, 225);
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  /* Style the submit button */
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  
+  

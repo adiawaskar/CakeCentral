@@ -20,7 +20,7 @@ const Menu = () => {
         <div className="cake_grid">
           {cakes.length > 0 ? (
             cakes.map(cake => (
-              <div key={cake.id} className="cake_item">
+              <div key={cake.id} className="cake_card">
                 <img src={cake.image} alt={`Cake ${cake.id}`} className="cake_image" />
                 <p className="cake_name">{cake.name}</p>
               </div>
