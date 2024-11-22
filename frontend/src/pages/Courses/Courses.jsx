@@ -5,9 +5,9 @@ import chefImg from '../../assets/chef_img.png';
 // Array containing image paths and descriptions
 const coursesData = [
   { image: require('../../assets/cakebaking.jpg'), title: "Cake Baking", description: "Learn the secrets to baking delicious cakes with expert guidance." },
-  { image: require('../../assets/muffins.jpg'), title: "Coffee Making", description: "Master the art of brewing the perfect cup of coffee, from beans to brew." },
+  { image: require('../../assets/muffins.jpg'), title: "Pastry Making", description: "Master the art of brewing the perfect cup of coffee, from beans to brew." },
   { image: require('../../assets/breadbaking.jpeg'), title: "Bread Baking", description: "Discover the joy of making fresh, homemade bread from scratch." },
-  { image: require('../../assets/coffeemaking.png'), title: "Pastry Making", description: "Create stunning pastries that look as good as they taste." },
+  { image: require('../../assets/coffeemaking.png'), title: "Coffee Making", description: "Create stunning pastries that look as good as they taste." },
 ];
 
 const Courses = () => {
