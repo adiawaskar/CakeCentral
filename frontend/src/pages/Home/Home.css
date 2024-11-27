@@ -1,0 +1,35 @@
+.home-page {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .home-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text visibility */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .centered-text h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .centered-text p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+  }
+  

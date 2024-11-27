@@ -172,6 +172,9 @@ const Order = () => {
               onChange={handleChange}
               required
             >
+              <option value="" disabled selected>
+                Select
+              </option>
               <option value="Strawberry Cake">Strawberry Cake</option>
               <option value="Chocolate Cake">Chocolate Cake</option>
               <option value="Vanilla Cake">Vanilla Cake</option>

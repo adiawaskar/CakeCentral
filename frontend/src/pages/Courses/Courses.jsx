@@ -16,29 +16,40 @@ const Courses = () => {
   const [contactNo, setContactNo] = useState('');
   const [selectedCourse, setSelectedCourse] = useState('');
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     // Create student object
     const student = { name, email, contactNo, course: selectedCourse };
 
-    // Get existing students or create an empty array
-    const enrolledStudents = JSON.parse(localStorage.getItem("enrolledStudents")) || [];
+    try {
+      // Make POST request to the backend
+      const response = await fetch('http://localhost:5000/api/enroll', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(student),
+      });
 
-    // Add the new student to the list
-    enrolledStudents.push(student);
+      const data = await response.json();
+      
+      if (response.ok) {
+        // Clear form fields
+        setName("");
+        setEmail(""); // Clear email field
+        setContactNo("");
+        setSelectedCourse("");
 
-    // Save the updated list back to localStorage
-    localStorage.setItem("enrolledStudents", JSON.stringify(enrolledStudents));
-
-    // Clear form fields
-    setName("");
-    setEmail(""); // Clear email field
-    setContactNo("");
-    setSelectedCourse("");
-
-    // Redirect to Enrolled page
-    window.location.href = "/enrolled";
+        // Redirect to Enrolled page
+        window.location.href = "/enrolled";
+      } else {
+        alert(data.message || 'Something went wrong');
+      }
+    } catch (error) {
+      console.error('Error enrolling student:', error);
+      alert('Failed to enroll student');
+    }
   };
 
   return (

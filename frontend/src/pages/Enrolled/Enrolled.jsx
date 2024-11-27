@@ -3,14 +3,30 @@ import './Enrolled.css';
 import { jsPDF } from "jspdf";
 import "jspdf-autotable";
 
-
 const Enrolled = () => {
   const [students, setStudents] = useState([]);
+  const [loading, setLoading] = useState(true); // For loading state
 
+  // Fetch enrolled students from the backend when the component mounts
   useEffect(() => {
-    // Fetch the enrolled students from localStorage
-    const enrolledStudents = JSON.parse(localStorage.getItem("enrolledStudents")) || [];
-    setStudents(enrolledStudents);
+    const fetchEnrolledStudents = async () => {
+      try {
+        // Make GET request to backend API
+        const response = await fetch('http://localhost:5000/api/enrolled'); // Adjust the URL as necessary
+        if (response.ok) {
+          const data = await response.json();
+          setStudents(data); // Set the fetched students in the state
+        } else {
+          console.error('Failed to fetch enrolled students');
+        }
+      } catch (error) {
+        console.error('Error fetching enrolled students:', error);
+      } finally {
+        setLoading(false); // Stop loading
+      }
+    };
+
+    fetchEnrolledStudents();
   }, []);
 
   // Function to download the data as JSON
@@ -37,34 +53,39 @@ const Enrolled = () => {
   return (
     <div className="enrolled-page">
       <h1>Enrolled Students</h1>
-      {/* Displaying the table even if there are no students */}
-      <table className="enrolled-table" id="enrolled-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Contact Number</th>
-            <th>Course</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* If no students, an empty table will be displayed */}
-          {students.length === 0 ? (
+
+      {/* Display loading message while data is being fetched */}
+      {loading ? (
+        <p>Loading enrolled students...</p>
+      ) : (
+        <table className="enrolled-table" id="enrolled-table">
+          <thead>
             <tr>
-              <td colSpan="4">No students enrolled yet.</td>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Contact Number</th>
+              <th>Course</th>
             </tr>
-          ) : (
-            students.map((student, index) => (
-              <tr key={index}>
-                <td>{student.name}</td>
-                <td>{student.email}</td>
-                <td>{student.contactNo}</td>
-                <td>{student.course}</td>
+          </thead>
+          <tbody>
+            {/* If no students, an empty table will be displayed */}
+            {students.length === 0 ? (
+              <tr>
+                <td colSpan="4">No students enrolled yet.</td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ) : (
+              students.map((student, index) => (
+                <tr key={index}>
+                  <td>{student.name}</td>
+                  <td>{student.email}</td>
+                  <td>{student.contactNo}</td>
+                  <td>{student.course}</td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      )}
 
       {/* Buttons for downloading data */}
       <div className="download-buttons">
